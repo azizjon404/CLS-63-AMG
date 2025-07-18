@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercedes-Benz CLS 63 AMG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #000;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .gallery {
+      margin-top: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .gallery img, .gallery iframe {
+      width: 100%;
+      max-height: 500px;
+      border-radius: 10px;
+      display: none;
+    }
+
+    .gallery img.active, .gallery iframe.active {
+      display: block;
+    }
+
+    .controls {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+
+<header>Mercedes-Benz CLS 63 AMG</header>
+
+<div class="container">
+  <h2>Общая информация</h2>
+  <p>
+    Mercedes-Benz CLS 63 AMG — это высокопроизводительная версия CLS-класса, разработанная подразделением AMG.
+    Этот автомобиль сочетает в себе спортивную динамику, элегантный дизайн и передовые технологии.
+  </p>
+
+  <h2>Двигатель</h2>
+  <p>
+    Оснащён 5,5-литровым битурбированным двигателем V8, созданным AMG, который обеспечивает выдающуюся мощность и
+    потрясающее ускорение.
+  </p>
+
+  <h2>Производительность</h2>
+  <ul>
+    <li>Разгон от 0 до 100 км/ч за 4,4 секунды</li>
+    <li>Максимальная скорость ограничена электроникой на отметке 250 км/ч</li>
+  </ul>
+
+  <h2>Трансмиссия</h2>
+  <p>
+    Установлена 7-ступенчатая роботизированная коробка передач AMG Speedshift MCT, обеспечивающая быструю и плавную смену передач.
+  </p>
+
+  <h2>Дизайн</h2>
+  <p>
+    CLS 63 AMG имеет элегантный и динамичный внешний вид, характерный для CLS-класса, с эксклюзивными спортивными элементами AMG.
+  </p>
+
+  <h2>Технологии</h2>
+  <ul>
+    <li>Системы безопасности и помощи водителю: COLLISION PREVENTION ASSIST, DISTRONIC PLUS, PRE-SAFE</li>
+    <li>Опциональная светодиодная оптика MULTIBEAM LED</li>
+  </ul>
+
+  <h2>Модификации</h2>
+  <p>
+    Доступны версии с задним и полным приводом (4MATIC), а также кузова седан и Shooting Brake.
+  </p>
+
+  <h2>Галерея</h2>
+  <div class="gallery">
+    <img src="https://i.ibb.co/bRWQ9KBx/IMG-3534-scaled.jpg" class="active" alt="CLS 63 AMG 1">
+    <img src="https://i.ibb.co/RTf7QWXL/mercedesbenz-cls-63-amg-5-5-v8-turbo-gasolina-4p-automatico-WMIMAGEM19111684129.jpg" alt="CLS 63 AMG 2">
+    <img src="https://i.ibb.co/GmMZGvm/67c595ce-a65f-4612-88ec-1096d61c4a86.jpg" alt="CLS 63 AMG 3">
+    <img src="https://i.ibb.co/hxJTxpNy/mercedes-cls-klasse-cls-63-amg-1000x600-cf9.jpg" alt="CLS 63 AMG 4">
+    <iframe allow="fullscreen;autoplay" allowfullscreen height="450" src="https://streamable.com/e/dqnuir?autoplay=0" width="100%" style="border:none;"></iframe>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevSlide()">Назад</button>
+    <button onclick="nextSlide()">Вперед</button>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.gallery img, .gallery iframe');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+</script>
+
+</body>
+</html>
